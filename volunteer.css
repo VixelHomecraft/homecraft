@@ -1,0 +1,382 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  /* Contact Section */
+.contact-section {
+    padding: 4rem 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Contact Categories */
+.contact-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.contact-item {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 8px rgba(101, 101, 101, 0.126);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item:hover {
+    background-color: #f1f1f1;
+}
+
+.contact-item img.icon {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.contact-item h2 {
+    font-size: 1.3rem;
+    color: #292929;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    margin-bottom: 0.5%;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Adding a small icon in the top right corner of the event boxes */
+.contact-item::before {
+    content: url('path-to-icon.svg'); /* Replace with your icon path */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Pop-up Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darkened background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.052); /* Elevated shadow */
+    transform: translateY(0);
+    animation: popup 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Add an image in the modal */
+.modal-content img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Styling for the close button */
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0); /* Slight shadow for input boxes */
+}
+
+.form-group button {
+    background-color: #3eabff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elevate button */
+}
+
+.form-group button:hover {
+    background-color: #2d8be7;
+}
+
+/* Add a shadow and slightly elevated effect for the modal */
+.modal-content {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes popup {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact-categories {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .contact-item img.icon {
+        margin-bottom: 1rem;
+    }
+}
+ 
+/* Footer Top Section */
+.footer-top {
+  background-color: #f7f7f7;
+  padding: 2rem 0;
+  border-top: 0.9px solid #939393;
+  color: #333;
+}
+
+.footer-top .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-top-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 15px;
+  margin-bottom: 1rem;
+  color: #777777;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+  font-size: 14px;
+  color: #929292;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #4d4d4d;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #f1f1f1;
+  color: #777777;
+  text-align: center;
+  padding: 1.0rem;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #777777;;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .separator {
+  color: #777777;
+}
+
+
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .contact-categories {
+      flex-direction: column;
+    }
+  
+    .contact-item {
+      text-align: center;
+    }
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(90deg, #ffd900, #ffa500, #ff8c00);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 30rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 65px;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-top: 14px;
+    height: 50px;
+    margin-right: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+  }
+  
+  /* Responsive Header */
+  @media screen and (max-width: 1200px) {
+    header {
+      padding: 0.5rem 10rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 0.5rem 2rem;
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: linear-gradient(90deg, #ffd900f6, #ffa600fa, #ff8c00f4);
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  }
